@@ -2,17 +2,37 @@ import { ApolloServer, gql } from "apollo-server";
 
 // The GraphQL schema
 const typeDefs = gql`
+  type Movie {
+    title: String
+  }
+
   type Query {
-    "A simple type for getting started!"
-    hello: String
+    movies: [Movie]
+    movie: Movie
+  }
+
+  type Mutation {
+    createMovie(title:String!): Boolean
+    deleteMovie(title:String!): Boolean
   }
 `;
 
 // A map of functions which return data for the schema.
 const resolvers = {
   Query: {
-    hello: () => 'babe',
+    movies: () => [],
+    movies: () => ({ title: "LOl" }),
   },
+  Mutation: {
+    createMovie: (_, args) => {
+      console.log(args)
+      return true
+    },
+    deleteMovie: (_, args) => {
+      console.log(args)
+      return true
+    },
+  }
 };
 
 const server = new ApolloServer({
