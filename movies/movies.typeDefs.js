@@ -10,7 +10,7 @@ export default gql`
     updatedAt: String!
   }
   type Query {
-    movies: [Movie]
+    movies: [Movie]  
     movie(id: Int!): Movie
   }
   type Mutation {
