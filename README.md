@@ -35,7 +35,7 @@ I wish I could practice new stacks for cool service that I would make someday
 
 * make .env file in root dir
 
-* set DATABASE_URL variable on env, leads to postgreSQL database and PORT variable for graphql playground port
+* set DATABASE_URL variable on env, leads to postgreSQL database and PORT variable for graphql playground port and SECRET_KEY variable for jwt token
 
 * pgadmin4 for window, postico for mac 
 
