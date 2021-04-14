@@ -1,5 +1,5 @@
   
-import bcrypt from "bcrypt";
+import * as bcrypt from "bcrypt";
 import client from "../../client";
 
 export default {

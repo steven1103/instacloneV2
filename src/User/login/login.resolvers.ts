@@ -1,5 +1,5 @@
-import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
+import * as bcrypt from "bcrypt";
+import * as jwt from "jsonwebtoken";
 import client from "../../client";
 
 export default {
@@ -20,6 +20,7 @@ export default {
         };
       }
       const token = await jwt.sign({ id: user.id }, process.env.SECRET_KEY);
+      console.log(token)
       return {
         ok: true,
         token,
